@@ -32,13 +32,31 @@ function SharedLayout() {
             className="flex items-center gap-2 text-lg font-semibold md:text-base"
           >
             <Package2 className="h-6 w-6" />
-            <span className="sr-only">Acme Inc</span>
+            <span className="sr-only">Santa's Wonderland</span>
           </a>
           <a
             href="#"
             className="text-muted-foreground transition-colors hover:text-foreground"
           >
             Home
+          </a>
+          <a
+            href="#about"
+            className="text-muted-foreground transition-colors hover:text-foreground"
+          >
+            About
+          </a>
+          <a
+            href="#history"
+            className="text-muted-foreground transition-colors hover:text-foreground"
+          >
+            History
+          </a>
+          <a
+            href="#contact"
+            className="text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Contact
           </a>
         </nav>
         <Sheet>
@@ -59,13 +77,31 @@ function SharedLayout() {
                 className="flex items-center gap-2 text-lg font-semibold"
               >
                 <Package2 className="h-6 w-6" />
-                <span className="sr-only">Acme Inc</span>
+                <span className="sr-only">Santa's Wonderland</span>
               </a>
               <a
                 href="#"
                 className="text-muted-foreground hover:text-foreground"
               >
                 Home
+              </a>
+              <a
+                href="#about"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                About
+              </a>
+              <a
+                href="#history"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                History
+              </a>
+              <a
+                href="#contact"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                Contact
               </a>
             </nav>
           </SheetContent>
@@ -89,9 +125,17 @@ function SharedLayout() {
           </DropdownMenu>
         </div>
       </header>
-      <main className="flex flex-1">
+      <main className="flex flex-1 flex-col items-center justify-center bg-red-100">
         <Outlet />
       </main>
+      <footer className="flex items-center justify-between p-4 bg-red-200">
+        <div>© 2023 Santa's Wonderland. All rights reserved.</div>
+        <div className="flex space-x-4">
+          <a href="#" className="text-muted-foreground hover:text-foreground">Facebook</a>
+          <a href="#" className="text-muted-foreground hover:text-foreground">Twitter</a>
+          <a href="#" className="text-muted-foreground hover:text-foreground">Instagram</a>
+        </div>
+      </footer>
     </div>
   )
 }
